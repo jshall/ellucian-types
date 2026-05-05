@@ -1,0 +1,11 @@
+{
+  "name": "@types/ellucian__react-design-system",
+  "dependencies": {
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.10",
+    "@mui/system": "^9.0.0",
+    "@types/react": "19.0.3",
+    "@types/react-dom": "19.0.3",
+    "tss-react": "^4.9.20"
+  }
+}
