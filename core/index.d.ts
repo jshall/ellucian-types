@@ -79,7 +79,22 @@ export const Box: FunctionComponent<baseProps>;
 export const Breadcrumbs: FunctionComponent<baseProps>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/Button */
-export const Button: FunctionComponent<baseProps>;
+export const Button: FunctionComponent<
+  baseProps<
+    | "root"
+    | "text"
+    | "contained"
+    | "containedSecondary"
+    | "sizeDefault"
+    | "sizeSmall"
+    | "startIcon"
+    | "endIcon"
+    | "disabled"
+    | "fullWidth"
+  > & {
+    onClick?: (event: MouseEvent) => void;
+  }
+>;
 /** @link https://path-designsystem.elluciancloud.com/#/components/Button */
 export const ButtonGroup: FunctionComponent<baseProps>;
 /** @link https://path-designsystem.elluciancloud.com/#/components/Button */
@@ -306,7 +321,17 @@ export const SelectionMenu: FunctionComponent<baseProps>;
 export const SelectionMenuItem: FunctionComponent<baseProps>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/SimpleDialog */
-export const SimpleDialog: FunctionComponent<baseProps>;
+export const SimpleDialog: FunctionComponent<
+  baseProps & {
+    open?: boolean;
+    title?: string;
+    onClose?: (
+      event: object,
+      reason?: "backdropClick" | "escapeKeyDown",
+    ) => void;
+    fullScreen?: boolean;
+  }
+>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/Skeleton */
 export const Skeleton: FunctionComponent<baseProps>;
@@ -395,7 +420,14 @@ export const Tabs: FunctionComponent<baseProps>;
 export const TextField: FunctionComponent<baseProps>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/TextLink */
-export const TextLink: FunctionComponent<baseProps>;
+export const TextLink: FunctionComponent<
+  baseProps & {
+    disabled?: boolean;
+    href: string;
+    onClick?: (event: MouseEvent) => void;
+    target?: string;
+  }
+>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/TimePicker */
 export const TimePicker: FunctionComponent<baseProps>;
@@ -418,7 +450,49 @@ export const TreeItem: FunctionComponent<baseProps>;
 export const TreeView: FunctionComponent<baseProps>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/Typography */
-export const Typography: FunctionComponent<baseProps>;
+export const Typography: FunctionComponent<
+  baseProps<
+    | "root"
+    | "body1"
+    | "body2"
+    | "body3"
+    | "caption"
+    | "h1"
+    | "h2"
+    | "h3"
+    | "h4"
+    | "h5"
+    | "h6"
+    | "inherit"
+    | "alignLeft"
+    | "alignCenter"
+    | "alignRight"
+    | "alignJustify"
+    | "noWrap"
+    | "gutterBottom"
+    | "paragraph"
+  > & {
+    align?: "center" | "inherit" | "left" | "right" | "justify";
+    color?: "error" | "inherit" | "initial" | "textPrimary" | "textSecondary";
+    display?: "inline" | "initial" | "block";
+    gutterBottom?: boolean;
+    noWrap?: boolean;
+    paragraph?: boolean;
+    variant?:
+      | "caption"
+      | "h1"
+      | "h2"
+      | "h3"
+      | "h4"
+      | "h5"
+      | "h6"
+      | "inherit"
+      | "body1"
+      | "body2"
+      | "body3"
+      | "srOnly";
+  }
+>;
 
 // Templates
 /** @link https://path-designsystem.elluciancloud.com/#/components/templates/ErrorPage */
