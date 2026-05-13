@@ -119,7 +119,7 @@ export function useData(): {
   getExtensionJwt(): Promise<string>;
   authenticatedEthosFetch(
     resource: string,
-    options: RequestInit,
+    options?: RequestInit,
   ): Promise<Response>;
 };
 
