@@ -92,6 +92,9 @@ export const Button: FunctionComponent<
     | "disabled"
     | "fullWidth"
   > & {
+    fluid?: boolean;
+    color?: "primary" | "secondary";
+    disabled?: boolean;
     onClick?: (event: MouseEvent) => void;
   }
 >;
@@ -166,9 +169,21 @@ export const Dropdown: FunctionComponent<baseProps>;
 export const DropdownItem: FunctionComponent<baseProps>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead */
-export const DropdownTypeahead: FunctionComponent<baseProps>;
+export const DropdownTypeahead: FunctionComponent<
+  baseProps & {
+    fullWidth?: boolean;
+    label: string;
+    value?: string;
+    onChange?: (value: string) => void;
+  }
+>;
 /** @link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead */
-export const DropdownTypeaheadItem: FunctionComponent<baseProps>;
+export const DropdownTypeaheadItem: FunctionComponent<
+  baseProps & {
+    value: string;
+    label: string;
+  }
+>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/EDSApplication */
 export const EDSApplication: FunctionComponent<baseProps>;
@@ -197,7 +212,33 @@ export const FormHelperText: FunctionComponent<baseProps>;
 export const FormLabel: FunctionComponent<baseProps>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/Grid */
-export const Grid: FunctionComponent<baseProps>;
+export const Grid: FunctionComponent<
+  baseProps &
+    ({ container: boolean } | { item: boolean }) & {
+      alignContent?:
+        | "center"
+        | "stretch"
+        | "flex-start"
+        | "flex-end"
+        | "space-between"
+        | "space-around";
+      alignItems?:
+        | "center"
+        | "stretch"
+        | "flex-start"
+        | "flex-end"
+        | "baseline";
+      direction?: "row" | "row-reverse" | "column" | "column-reverse";
+      fullWidth?: boolean;
+      justifyContent?:
+        | "center"
+        | "flex-start"
+        | "flex-end"
+        | "space-between"
+        | "space-around"
+        | "space-evenly";
+    }
+>;
 
 /** @link https://path-designsystem.elluciancloud.com/#/components/HeaderBar */
 export const HeaderBar: FunctionComponent<baseProps>;
