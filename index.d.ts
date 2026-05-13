@@ -111,9 +111,9 @@ export function useThemeInfo(): {
  * @link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_page_props_sdk.html
  */
 export function useData(): {
-  getEthosQuery<T>(params: {
+  getEthosQuery<T = any>(params: {
     queryId: string;
-    properties: Record<string, string>;
+    properties?: Record<string, string>;
   }): Promise<T>;
   getEthosQueryResourceVersions(): Promise<unknown>;
   getExtensionJwt(): Promise<string>;
@@ -171,12 +171,12 @@ export function useExtensionControl(): {
 };
 
 /** Undocumented */
-export function useExperienceInfo(): {}
+export function useExperienceInfo(): {};
 
 /** Undocumented */
 export function useTracker(): {
-  track: (e:unknown,t:unknown) => unknown
-}
+  track: (e: unknown, t: unknown) => unknown;
+};
 
 /** @link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_card_props_sdk.html */
 export type ExperienceCard<
