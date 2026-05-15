@@ -9,8 +9,8 @@ type baseProps<classNames extends keyof any = keyof any> = {
   children?: ReactNode;
   component?: keyof JSX.IntrinsicElements;
   /**
-   * The sx prop is a shortcut for defining custom styles that has access to the theme. You can specify any valid CSS using this prop, as well as many theme-aware properties.
-   * @link https://path-designsystem.elluciancloud.com/#/components/customization/the-sx-prop */
+   * {@link https://path-designsystem.elluciancloud.com/#/components/customization/the-sx-prop|The `sx` prop} is a shortcut for defining custom styles that has access to the theme. You can specify any valid CSS using this prop, as well as many theme-aware properties.
+   */
   sx?: SxProps;
 };
 type breakpoint = "xs" | "sm" | "md" | "lg";
@@ -29,21 +29,34 @@ type RowSelectionChangeEvent<T extends object = any> =
 
 //#region Components
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/ActionMenu */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ActionMenu|ActionMenu}
+ */
 export const ActionMenu: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/ActionMenu */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ActionMenu|ActionMenu}
+ */
 export const ActionMenuItem: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/AdvancedTable */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/AdvancedTable|AdvancedTable}
+ */
 export const AdvancedTable: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Alert */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Alert|Alert}
+ */
 export const Alert: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Autocomplete */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Autocomplete|Autocomplete}
+ */
 export const Autocomplete: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Avatar */
+/**
+ * A component that creates a graphical representation of a user.
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Avatar|Avatar}
+ */
 export const Avatar: FunctionComponent<
   baseProps<"root" | "img"> & {
     alt?: string;
@@ -55,7 +68,9 @@ export const Avatar: FunctionComponent<
     variant?: "default" | "interactive";
   }
 >;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Avatar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Avatar|Avatar}
+ */
 export const AvatarGroup: FunctionComponent<
   baseProps<"root" | "avatar"> & {
     max?: number;
@@ -64,21 +79,33 @@ export const AvatarGroup: FunctionComponent<
   }
 >;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Backdrop */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Backdrop|Backdrop}
+ */
 export const Backdrop: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Badge */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Badge|Badge}
+ */
 export const Badge: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Badge */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Badge|Badge}
+ */
 export const NotificationBadge: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Box */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Box|Box}
+ */
 export const Box: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Breadcrumbs */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Breadcrumbs|Breadcrumbs}
+ */
 export const Breadcrumbs: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Button */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Button|Button}
+ */
 export const Button: FunctionComponent<
   baseProps<
     | "root"
@@ -98,77 +125,135 @@ export const Button: FunctionComponent<
     onClick?: (event: MouseEvent) => void;
   }
 >;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Button */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Button|Button}
+ */
 export const ButtonGroup: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Button */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Button|Button}
+ */
 export const DropdownButtonItem: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Calendar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Calendar|Calendar}
+ */
 export const Calendar: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Calendar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Calendar|Calendar}
+ */
 export const CalendarLegend: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Calendar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Calendar|Calendar}
+ */
 export const CalendarLegendItem: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Calendar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Calendar|Calendar}
+ */
 export const CalendarToolbar: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Calendar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Calendar|Calendar}
+ */
 export const EventWrapper: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Card */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Card|Card}
+ */
 export const Card: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Card */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Card|Card}
+ */
 export const CardActions: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Card */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Card|Card}
+ */
 export const CardContent: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Card */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Card|Card}
+ */
 export const CardHeader: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Card */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Card|Card}
+ */
 export const CardMedia: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Carousel */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Carousel|Carousel}
+ */
 export const Carousel: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Checkbox */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Checkbox|Checkbox}
+ */
 export const Checkbox: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Chip */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Chip|Chip}
+ */
 export const Chip: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/CircularProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/CircularProgress|CircularProgress}
+ */
 export const CircularProgress: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/ConfirmationDialog */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ConfirmationDialog|ConfirmationDialog}
+ */
 export const ConfirmationDialog: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/DatePicker */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/DatePicker|DatePicker}
+ */
 export const DatePicker: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/DateRangePicker */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/DateRangePicker|DateRangePicker}
+ */
 export const DateRangePicker: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Dialog */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Dialog|Dialog}
+ */
 export const Dialog: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Dialog */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Dialog|Dialog}
+ */
 export const DialogActions: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Dialog */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Dialog|Dialog}
+ */
 export const DialogContent: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Dialog */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Dialog|Dialog}
+ */
 export const DialogContentText: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Dialog */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Dialog|Dialog}
+ */
 export const DialogTitle: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Divider */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Divider|Divider}
+ */
 export const Divider: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Drawer */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Drawer|Drawer}
+ */
 export const Drawer: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Dropdown */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Dropdown|Dropdown}
+ */
 export const Dropdown: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Dropdown */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Dropdown|Dropdown}
+ */
 export const DropdownItem: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead|DropdownTypeahead}
+ */
 export const DropdownTypeahead: FunctionComponent<
   baseProps & {
     fullWidth?: boolean;
@@ -177,7 +262,9 @@ export const DropdownTypeahead: FunctionComponent<
     onChange?: (value: string) => void;
   }
 >;
-/** @link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead|DropdownTypeahead}
+ */
 export const DropdownTypeaheadItem: FunctionComponent<
   baseProps & {
     value: string;
@@ -185,33 +272,58 @@ export const DropdownTypeaheadItem: FunctionComponent<
   }
 >;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/EDSApplication */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/EDSApplication|EDSApplication}
+ */
 export const EDSApplication: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel|ExpansionPanel}
+ */
 export const ExpansionPanel: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel|ExpansionPanel}
+ */
 export const ExpansionPanelActions: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel|ExpansionPanel}
+ */
 export const ExpansionPanelDetails: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ExpansionPanel|ExpansionPanel}
+ */
 export const ExpansionPanelSummary: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Footer */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Footer|Footer}
+ */
 export const Footer: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/FormControl */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/FormControl|FormControl}
+ */
 export const FormControl: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/FormControl */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/FormControl|FormControl}
+ */
 export const FormControlLabel: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/FormControl */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/FormControl|FormControl}
+ */
 export const FormGroup: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/FormControl */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/FormControl|FormControl}
+ */
 export const FormHelperText: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/FormControl */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/FormControl|FormControl}
+ */
 export const FormLabel: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Grid */
+/**
+ * Use Grid to create a responsive layout.
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Grid|Grid}
+ */
 export const Grid: FunctionComponent<
   baseProps &
     ({ container: boolean } | { item: boolean }) & {
@@ -240,21 +352,31 @@ export const Grid: FunctionComponent<
     }
 >;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/HeaderBar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/HeaderBar|HeaderBar}
+ */
 export const HeaderBar: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/HeaderBar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/HeaderBar|HeaderBar}
+ */
 export const HeaderBarDropdown: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/HeaderBar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/HeaderBar|HeaderBar}
+ */
 export const HeaderBarItem: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/HeaderBar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/HeaderBar|HeaderBar}
+ */
 export const HeaderBarLogo: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/IconButton */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/IconButton|IconButton}
+ */
 export const IconButton: FunctionComponent<baseProps>;
 
 /**
  * Use Illustration to soften content-heavy pages and to communicate important moments in a user's journey.
- * @link https://path-designsystem.elluciancloud.com/#/components/Illustration
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Illustration|Illustration}
  */
 export const Illustration: FunctionComponent<
   baseProps<"root" | "primary" | "secondary"> & {
@@ -300,68 +422,118 @@ export const Illustration: FunctionComponent<
   }
 >;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/InputAdornment */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/InputAdornment|InputAdornment}
+ */
 export const InputAdornment: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const List: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const ListItem: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const ListItemAvatar: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const ListItemButton: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const ListItemIcon: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const ListItemSecondaryAction: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const ListItemText: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/List */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/List|List}
+ */
 export const ListSubheader: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Logo */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Logo|Logo}
+ */
 export const Logo: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/MegaMenu */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/MegaMenu|MegaMenu}
+ */
 export const MegaMenu: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/PageHeader */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/PageHeader|PageHeader}
+ */
 export const PageHeader: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Pagination */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Pagination|Pagination}
+ */
 export const Pagination: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Paper */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Paper|Paper}
+ */
 export const Paper: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Popover */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Popover|Popover}
+ */
 export const Popover: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Popper */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Popper|Popper}
+ */
 export const Popper: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Radio */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Radio|Radio}
+ */
 export const Radio: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Radio */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Radio|Radio}
+ */
 export const RadioGroup: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/RichTextEditor */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/RichTextEditor|RichTextEditor}
+ */
 export const RichTextEditor: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/RichTextEditor */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/RichTextEditor|RichTextEditor}
+ */
 export const RichTextRenderer: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Search */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Search|Search}
+ */
 export const Search: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Search */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Search|Search}
+ */
 export const SearchItem: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/SelectionMenu */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/SelectionMenu|SelectionMenu}
+ */
 export const SelectionMenu: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/SelectionMenu */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/SelectionMenu|SelectionMenu}
+ */
 export const SelectionMenuItem: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/SimpleDialog */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/SimpleDialog|SimpleDialog}
+ */
 export const SimpleDialog: FunctionComponent<
   baseProps & {
     open?: boolean;
@@ -374,46 +546,80 @@ export const SimpleDialog: FunctionComponent<
   }
 >;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Skeleton */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Skeleton|Skeleton}
+ */
 export const Skeleton: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Slider */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Slider|Slider}
+ */
 export const Slider: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Snackbar */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Snackbar|Snackbar}
+ */
 export const Snackbar: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/StandaloneDatePicker */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StandaloneDatePicker|StandaloneDatePicker}
+ */
 export const StandaloneDatePicker: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/StatusLabel */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StatusLabel|StatusLabel}
+ */
 export const StatusLabel: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const MobileStepper: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const MobileStepperCounter: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const MobileStepperLabel: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const MobileStepperStep: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const MobileStepperTitle: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const Step: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const StepButton: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const StepContent: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const StepLabel: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/StepProgress */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/StepProgress|StepProgress}
+ */
 export const StepProgress: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Switch */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Switch|Switch}
+ */
 export const Switch: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const Table: FunctionComponent<
   baseProps<"root" | "stickyHeader"> & {
     size?: "small" | "medium";
@@ -427,19 +633,33 @@ export const Table: FunctionComponent<
     onRowSelectionChange?: (event: RowSelectionChangeEvent) => void;
   }
 >;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableBody: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableCell: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableEditableCell: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableExpandableRow: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableFooter: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableHead: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableRow: FunctionComponent<
   baseProps<"root" | "selected" | "hover"> & {
     hover?: boolean;
@@ -447,20 +667,32 @@ export const TableRow: FunctionComponent<
     rowData?: any;
   }
 >;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableSortLabel: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Table */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|Table}
+ */
 export const TableToolbar: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Tabs */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Tabs|Tabs}
+ */
 export const Tab: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/Tabs */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Tabs|Tabs}
+ */
 export const Tabs: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/TextField */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/TextField|TextField}
+ */
 export const TextField: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/TextLink */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/TextLink|TextLink}
+ */
 export const TextLink: FunctionComponent<
   baseProps & {
     disabled?: boolean;
@@ -470,27 +702,41 @@ export const TextLink: FunctionComponent<
   }
 >;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/TimePicker */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/TimePicker|TimePicker}
+ */
 export const TimePicker: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/ToggleButton */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ToggleButton|ToggleButton}
+ */
 export const ToggleButton: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/ToggleButton */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/ToggleButton|ToggleButton}
+ */
 export const ToggleButtonGroup: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Tooltip */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Tooltip|Tooltip}
+ */
 export const Tooltip: FunctionComponent<
   baseProps<"tooltip"> & {
     title?: string;
   }
 >;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/TreeView */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/TreeView|TreeView}
+ */
 export const TreeItem: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/TreeView */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/TreeView|TreeView}
+ */
 export const TreeView: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/Typography */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/Typography|Typography}
+ */
 export const Typography: FunctionComponent<
   baseProps<
     | "root"
@@ -534,20 +780,31 @@ export const Typography: FunctionComponent<
       | "srOnly";
   }
 >;
+//#endregion
 
-// Templates
-/** @link https://path-designsystem.elluciancloud.com/#/components/templates/ErrorPage */
+//#region Templates
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/templates/ErrorPage|ErrorPage}
+ */
 export const ErrorPage: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/templates/FixedSidebarLayout */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/templates/FixedSidebarLayo
+ t|FixedSidebarLayout} */
 export const FixedSidebarLayout: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/templates/MasterDetail */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/templates/MasterDetail|MasterDetail}
+ */
 export const MasterDetail: FunctionComponent<baseProps>;
 
-/** @link https://path-designsystem.elluciancloud.com/#/components/templates/TabLayout */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/templates/TabLayout|TabLayout}
+ */
 export const TabLayout: FunctionComponent<baseProps>;
-/** @link https://path-designsystem.elluciancloud.com/#/components/templates/TabLayout */
+/**
+ * @see {@link https://path-designsystem.elluciancloud.com/#/components/templates/TabLayout|TabLayout}
+ */
 export const TabLayoutContent: FunctionComponent<baseProps>;
 
 //#endregion
