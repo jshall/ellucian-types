@@ -129,23 +129,23 @@ export function useData(): {
  * @link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_page_props_sdk.html
  */
 export function useCache(): {
-  getItem(params: {
+  getItem<T = unknown>(params: {
     key: string;
-    scope: string;
-    options: { expireTime: number; session: boolean };
-  }): void;
+    scope?: string;
+    options?: { expireTime?: number; session?: boolean };
+  }): { data: T; expired: boolean };
   storeItem(params: {
     key: string;
     data: any;
-    scope: string;
-    options: { session: boolean };
+    scope?: string;
+    options?: { session: boolean };
   }): void;
   removeItem(params: {
     key: string;
-    scope: string;
-    options: { session: boolean };
+    scope?: string;
+    options?: { session: boolean };
   }): void;
-  clear(params: { scope: string; options: { session: boolean } }): void;
+  clear(params: { scope?: string; options?: { session: boolean } }): void;
 };
 
 /** @link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_card_props_sdk.html */
