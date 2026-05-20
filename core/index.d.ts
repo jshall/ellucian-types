@@ -66,6 +66,7 @@ export const Avatar: FunctionComponent<
     src?: JSX.IntrinsicElements["img"]["src"];
     srcSet?: JSX.IntrinsicElements["img"]["srcSet"];
     variant?: "default" | "interactive";
+    onClick?: (event: MouseEvent) => void;
   }
 >;
 /**
