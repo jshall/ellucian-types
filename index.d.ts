@@ -44,7 +44,9 @@ export function useCardInfo<Configuration = {}, CustomConfiguration = {}>(): {
  * @see {@link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_card_props_sdk.html|Card props and hooks available in the SDK}
  */
 export function useCardControl(): ReturnType<typeof useExtensionControl> & {
-  drilldown(): void;
+  /** Function to navigate to a drilldown state to show details on based on the user's selection in the card. For an example, see the `src/cards/DrilldownCard.jsx` sample file in the {@link https://github.com/ellucian-developer/experience-sdk-sample-extensions/blob/main/sdk-samples/src/cards/DrilldownCard.jsx|`sdk-samples` extension in Github}. */
+  drilldown(onCloseFunction: () => void, alternativeTitle: string): void;
+  /** Function to use the API, rather than the user clicking on the back arrow, to go from the drilldown state back to the card. */
   resetDrilldown(): void;
   setPreventRemove(): void;
   setPreventRemoveMessage(): void;
