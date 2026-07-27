@@ -43,7 +43,10 @@ export function useCardInfo<Configuration = {}, CustomConfiguration = {}>(): {
 /**
  * @see {@link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_card_props_sdk.html|Card props and hooks available in the SDK}
  */
-export function useCardControl(): ReturnType<typeof useExtensionControl> & {
+export function useCardControl<
+  CustomClientConfiguration = {},
+  CustomServerConfiguration = {},
+>(): ReturnType<typeof useExtensionControl> & {
   /** Function to navigate to a drilldown state to show details on based on the user's selection in the card. For an example, see the `src/cards/DrilldownCard.jsx` sample file in the {@link https://github.com/ellucian-developer/experience-sdk-sample-extensions/blob/main/sdk-samples/src/cards/DrilldownCard.jsx|`sdk-samples` extension in Github}. */
   drilldown(onCloseFunction: () => void, alternativeTitle: string): void;
   /** Function to use the API, rather than the user clicking on the back arrow, to go from the drilldown state back to the card. */
@@ -52,8 +55,20 @@ export function useCardControl(): ReturnType<typeof useExtensionControl> & {
   setPreventRemoveMessage(): void;
   navigateToPage(): void;
   getUrlToPage(): void;
-  setCustomConfiguration(): void;
-  setIsCustomConfigurationValid(): void;
+  /** Call this function from the custom configuration component to save the custom configuration values. This function accepts only one parameter as object. */
+  setCustomConfiguration(configuration: {
+    customConfiguration: {
+      client: CustomClientConfiguration;
+      server: CustomServerConfiguration;
+    };
+  }): void;
+  /** Call this function to set the validity of the custom configuration form. If the form is not valid, then the create card process will not allow the values to be stored. */
+  setIsCustomConfigurationValid(
+    /** A boolean parameter indicating whether the configuration is valid. */
+    valid: boolean,
+    /** A numerical parameter indicating the number of validation errors. */
+    errorCount: number,
+  ): void;
 };
 
 /**
@@ -205,6 +220,17 @@ export type ExperienceCard<
   data: ReturnType<typeof useData>;
   cache: ReturnType<typeof useCache>;
 }>;
+
+/**
+ * @see {@link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/t_custom_config.html|Define a custom configuration}
+ */
+export type ExperienceConfiguration<
+  CustomClientConfiguration = {},
+  CustomServerConfiguration = {},
+> = ExperienceCard<
+  { client: {}; server: {} },
+  { client: CustomClientConfiguration; server: CustomServerConfiguration }
+>;
 
 /**
  * @see {@link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_page_props_sdk.html|Page props and hooks available in the SDK}
