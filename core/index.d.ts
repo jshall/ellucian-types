@@ -366,23 +366,24 @@ export function Dropdown(props: baseProps): ReactNode;
  */
 export function DropdownItem(props: baseProps): ReactNode;
 
+type DropdownTypeaheadValue = string | number | boolean
 /**
  * @see {@link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead|EDS DropdownTypeahead}
  */
-export function DropdownTypeahead(
-  props: baseProps & {
+export function DropdownTypeahead<Value extends DropdownTypeaheadValue>(
+  props: Omit<baseProps,"onChange"> & {
     fullWidth?: boolean;
     label: string;
-    value?: string;
-    onChange?: (value: string) => void;
+    value?: Value;
+    onChange?: (value: Value) => void;
   },
 ): ReactNode;
 /**
  * @see {@link https://path-designsystem.elluciancloud.com/#/components/DropdownTypeahead|EDS DropdownTypeahead}
  */
-export function DropdownTypeaheadItem(
+export function DropdownTypeaheadItem<Value extends DropdownTypeaheadValue>(
   props: baseProps & {
-    value: string;
+    value: Value;
     label: string;
   },
 ): ReactNode;
