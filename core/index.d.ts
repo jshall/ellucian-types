@@ -104,11 +104,13 @@ export function AdvancedTable(props: baseProps): ReactNode;
 
 /**
  * @see {@link https://path-designsystem.elluciancloud.com/#/components/Alert|EDS Alert}
+ * @see {@link https://mui.com/material-ui/api/alert/|MUI Alert}
  */
 export function Alert(props: AlertProps): ReactNode;
 
 /**
  * @see {@link https://path-designsystem.elluciancloud.com/#/components/Autocomplete|EDS Autocomplete}
+ * @see {@link https://mui.com/material-ui/api/autocomplete/|MUI Autocomplete}
  */
 export function Autocomplete<
   Value,
@@ -777,6 +779,7 @@ export function TableCell(props: TableCellProps): ReactNode;
 export function TableEditableCell(props: TableCellProps): ReactNode;
 /**
  * @see {@link https://path-designsystem.elluciancloud.com/#/components/Table|EDS Table}
+ * @see {@link https://mui.com/material-ui/api/table-row/|MUI TableRow}
  */
 export function TableExpandableRow(props: TableRowProps): ReactNode;
 /**
