@@ -84,17 +84,15 @@ export function usePageInfo(): {
 /**
  * @see {@link https://resources.elluciancloud.com/r/bundle/ellucian_experience/page/r_page_props_sdk.html|Page props and hooks available in the SDK}
  */
-export function usePageControl(): {
+export function usePageControl(): ReturnType<typeof useExtensionControl> & {
   /**
    * A string passed to this function will be the title of the page. If this function is not specified, the page title matches the title of the card from which the page was launched.
    * @param title Page title
    */
   setPageTitle(title: string): void;
   setPageToolbar(): void;
-  setErrorMessage(): void;
   setExitPrompt(): void;
   setPageClosingCallback(): void;
-  setLoadingStatus(): void;
   navigateToPage(): void;
   getUrlToPage(): void;
   closePage(): void;
